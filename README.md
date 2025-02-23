@@ -1,1 +1,1 @@
-# automatic_vehicle_number_plate_recognition
+# Automatic Vehicle Number Plate Recognition
