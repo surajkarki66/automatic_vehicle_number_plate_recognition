@@ -1,18 +1,35 @@
 import streamlit as st
 
-def main():
-    st.title("Basic Streamlit App")
-    st.write("Welcome to my simple Streamlit application!")
-    
-    name = st.text_input("Enter your name:")
-    if name:
-        st.write(f"Hello, {name}!")
-    
-    number = st.number_input("Enter a number:", min_value=0, max_value=100, value=50)
-    st.write(f"You entered: {number}")
-    
-    if st.button("Click me!"):
-        st.success("Button clicked!")
 
-if __name__ == "__main__":
-    main()
+# --- PAGE SETUP ---
+home_page = st.Page(
+    "views/home.py",
+    title="Home",
+    icon=":material/home:",
+    default=True,
+)
+
+license_plate_recognition_page = st.Page(
+    "views/license_plate_recognition.py",
+    title="License Plate Recognition",
+    icon=":material/qr_code_scanner:",
+)
+
+
+# --- NAVIGATION SETUP [WITH SECTIONS]---
+pg = st.navigation(
+    {
+        "Info": [home_page],
+        "Analysis": [license_plate_recognition_page],
+    }
+)
+
+# --- SHARED ON ALL PAGES ---
+st.logo("assets/anpr.png", size="large")
+st.sidebar.image("assets/anpr.png")
+st.sidebar.markdown("Made with ❤️ by Suraj Karki")
+
+
+# --- RUN NAVIGATION ---
+pg.run()
+
