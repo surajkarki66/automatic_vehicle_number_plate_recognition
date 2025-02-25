@@ -2,15 +2,9 @@ import os
 
 import streamlit as st
 
-# Streamlit UI
-st.title("🚗 License Plate Recognition System")
-st.write("Upload a video to detect vehicles and recognize license plates.")
-
-
 import cv2
 import numpy as np
 import tempfile
-import pandas as pd
 
 from ultralytics import YOLO
 
@@ -38,6 +32,9 @@ def load_models():
 
 # Load models once
 coco_model, license_plate_detector, mot_tracker = load_models()
+# Streamlit UI
+st.title("🚗 License Plate Recognition System")
+st.write("Upload a video to detect vehicles and recognize license plates.")
 
 st.markdown(
     '[📥 Download Sample Video](https://drive.google.com/file/d/1pxgfMnACjBdkQ4JWm8pj8wE2pimEChCG/view?usp=sharing)', 
