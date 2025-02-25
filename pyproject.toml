@@ -3,7 +3,15 @@ name = "automatic-vehicle-number-plate-recognition"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11.2"
 dependencies = [
+    "easyocr>=1.7.2",
+    "ffmpeg-python>=0.2.0",
+    "filterpy>=1.4.5",
+    "numpy>=2.1.1",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+    "scipy>=1.15.2",
     "streamlit>=1.42.2",
+    "ultralytics>=8.3.78",
 ]

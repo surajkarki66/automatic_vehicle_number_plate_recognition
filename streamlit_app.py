@@ -15,12 +15,18 @@ license_plate_recognition_page = st.Page(
     icon=":material/qr_code_scanner:",
 )
 
+export_video_page = st.Page(
+    "views/export_video.py",
+    title="Export Video",
+    icon=":material/video_camera_front:",
+)
+
 
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
     {
         "Info": [home_page],
-        "Analysis": [license_plate_recognition_page],
+        "Analysis": [license_plate_recognition_page, export_video_page],
     }
 )
 
