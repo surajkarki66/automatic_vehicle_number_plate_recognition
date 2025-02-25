@@ -1,0 +1,9 @@
+easyocr  
+ffmpeg-python  
+filterpy  
+numpy  
+opencv-python  
+pandas  
+scipy  
+streamlit  
+ultralytics
